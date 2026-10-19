@@ -8,6 +8,9 @@
   <meta name="title-en" content="Consulting – Andersen Games &amp; IT">
   <meta name="description" content="IT consulting and software development from Andersen Games & IT.">
   <link rel="canonical" href="https://tech.gamesit.no/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script src="lang.js"></script>
   <style>
     :root { --bg:#f5f7f8; --fg:#182026; --muted:#56636d; --line:#dde3e7; --accent:#0f6e8c; }
@@ -17,6 +20,11 @@
     body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
     .top { max-width:760px; margin:0 auto; padding:20px 20px 0; display:flex; justify-content:space-between; align-items:center; gap:12px; }
     .back { color:var(--muted); text-decoration:none; font-size:.95rem; }
+    .brand { display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:inherit; font-family:'Manrope', sans-serif; font-size:19px; letter-spacing:-0.3px; white-space:nowrap; }
+    .brand img { width:34px; height:34px; display:block; }
+    .brand b { font-weight:800; }
+    .brand span.sub { font-weight:500; color:#0E8F6B; }
+    @media (prefers-color-scheme: dark) { .brand span.sub { color:#22D3A0; } }
     .langs button { font:inherit; font-size:.9rem; background:none; border:1px solid var(--line); color:var(--muted); padding:4px 12px; cursor:pointer; }
     .langs button:first-child { border-radius:8px 0 0 8px; } .langs button:last-child { border-radius:0 8px 8px 0; border-left:0; }
     .langs button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
@@ -30,7 +38,7 @@
 </head>
 <body>
   <div class="top">
-    <a class="back" href="https://gamesit.no/">← Andersen Games &amp; IT</a>
+    <a class="brand" href="https://gamesit.no/"><picture><source srcset="logo-dark.svg" media="(prefers-color-scheme: dark)"><img src="logo.svg" alt="" width="34" height="34"></picture><span><b>Andersen</b> <span class="sub">Games &amp; IT</span></span></a>
     <div class="langs" role="group" aria-label="Språk / Language">
       <button type="button" data-set-lang="nb" aria-pressed="false" lang="nb">Norsk</button><button type="button" data-set-lang="en" aria-pressed="false" lang="en">English</button>
     </div>
